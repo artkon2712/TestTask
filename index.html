@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  
+    <title>orto_v2</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/terraformer@1.0.8"></script>
+    <script src="https://unpkg.com/terraformer-wkt-parser@1.1.2"></script>
+</head>
+<body>
+    <div class="content">
+        <h1>Построение линии ортодромии</h1>
+        <div class="inpForm">
+            <div class="line1">
+                <h2>Параметры</h2>
+                <h2>Ввод данных</h2>
+                <h2>Описание</h2>
+            </div>
+            <form id="form" action="">
+                <div class="line2">
+                    <h3>Point1</h3>
+                    <label for="point1"></label>
+                    <input type="text" id="point1" value="">
+                    <img src="icon.png" width="50" height="50">
+                    <h3>Начальная точка в формате WkT</h3>
+                </div>
+                <div class="line3">
+                    <h3>Point2</h3>
+                    <label for="point2"></label>
+                    <input type="text" id="point2" value="">
+                    <img src="icon.png" width="50" height="50">
+                    <h3>Конечная точка в формате WkT</h3>
+                </div>
+                <div class="line4">
+                    <h3>CS</h3>
+                    <select class="sel" name="vvod" >
+                        <option value="1">СК-42</option>
+                        <option value="2">WGS-84</option>
+                        <option value="3">СК-92</option>
+                    </select>
+                    <h3>Система координат</h3>
+                </div>
+                <div class="line5">
+                    <h3>Count</h3>
+                    <label for="countNum"></label>
+                    <input id="countNum" type="number" value="10">
+                    <h3>Количество точек, по умолчанию 10</h3>
+                </div>
+                <div class="confirm">
+                    <input type="submit" value="Произвести расчет">
+                </div>
+            </form>
+        </div>
+
+        <div id="map"></div>
+        <script src="scripts.js"></script>
+    </div>    
+</body>
+</html>
